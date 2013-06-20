@@ -6,12 +6,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Package", "Build Package", "{0F945291-F264-44AF-9C6A-B1BB0B9E785E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package", "Package", "{0F945291-F264-44AF-9C6A-B1BB0B9E785E}"
 	ProjectSection(SolutionItems) = preProject
-		Build\package.build.cmd = Build\package.build.cmd
-		Build\package.build.xml = Build\package.build.xml
-		Build\package.xml = Build\package.xml
-		Build\readme.txt = Build\readme.txt
+		build.cmd = build.cmd
+		package\package.proj = package\package.proj
+		package\package.xml = package\package.xml
+		package\package.txt = package\package.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.Sisyphus", "Src\Our.Umbraco.Sisyphus\Our.Umbraco.Sisyphus.csproj", "{98633F5B-372F-4ACC-BCFB-56EF50784504}"

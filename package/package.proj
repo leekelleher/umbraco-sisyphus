@@ -13,9 +13,9 @@
 
 	<!-- PROPERTIES -->
 	<PropertyGroup>
-		<VersionMajor>0</VersionMajor>
-		<VersionMinor>2</VersionMinor>
-		<VersionPatch>2</VersionPatch>
+		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionPatch>0</VersionPatch>
 		<VersionSuffix></VersionSuffix>
 		<UmbracoVersion>4.6.1</UmbracoVersion>
 	</PropertyGroup>
@@ -71,14 +71,11 @@
 		<ItemGroup>
 			<ManifestFiles Include="$(BuildDir)\**\*" Exclude="$(BuildDir)\package.xml" />
 		</ItemGroup>
-		<ReadLinesFromFile File="$(PackageDir)\readme.txt">
-			<Output TaskParameter="Lines" ItemName="Readme" />
-		</ReadLinesFromFile>
 		<ManifestUpdate ManifestFile="$(BuildDir)\package.xml"
 			WorkingDirectory="$(BuildDir)"
 			MinimumRequiredUmbracoVersion="$(UmbracoVersion)"
 			PackageVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)$(VersionSuffix)"
-			Readme="$([System.IO.File]::ReadAllText(readme.txt))"
+			Readme="$([System.IO.File]::ReadAllText(package.txt))"
 			Files="@(ManifestFiles)" />
 	</Target>
 
@@ -88,9 +85,9 @@
 			<PackageFiles Include="$(BuildDir)\**\*.*" />
 		</ItemGroup>
 		<Package ManifestFile="$(BuildDir)\package.xml"
-		   WorkingDirectory="$(BuildDir)"
-		   OutputDirectory="$(PackageDir)"
-		   Files="@(PackageFiles)" />
+			WorkingDirectory="$(BuildDir)"
+			OutputDirectory="$(RootDir)"
+			Files="@(PackageFiles)" />
 		<RemoveDir Directories="$(BuildDir)" Condition="Exists('$(BuildDir)')" />
 	</Target>
 
