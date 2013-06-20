@@ -1,0 +1,3 @@
+[submodule "Lib/sisyphus"]
+	path = Lib/sisyphus
+	url = https://github.com/simsalabim/sisyphus.git
