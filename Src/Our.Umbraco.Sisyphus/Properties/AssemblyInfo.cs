@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Umbrella Inc Ltd")]
 [assembly: AssemblyProduct("Our.Umbraco.Sisyphus")]
-[assembly: AssemblyCopyright("Copyright \xa9 Lee Kelleher, Umbrella Inc Ltd 2012")]
+[assembly: AssemblyCopyright("Copyright \xa9 Lee Kelleher, Umbrella Inc Ltd 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
