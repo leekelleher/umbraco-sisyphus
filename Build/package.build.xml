@@ -15,7 +15,7 @@
 	<PropertyGroup>
 		<VersionMajor>0</VersionMajor>
 		<VersionMinor>2</VersionMinor>
-		<VersionPatch>1</VersionPatch>
+		<VersionPatch>2</VersionPatch>
 		<VersionSuffix></VersionSuffix>
 		<UmbracoVersion>4.6.1</UmbracoVersion>
 	</PropertyGroup>
@@ -43,7 +43,7 @@
 		</Version>
 		<AssemblyInfo CodeLanguage="CS"
 			OutputFile="$(ProjectDir)\Properties\VersionInfo.cs"
-			AssemblyVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)"
+			AssemblyVersion="$(VersionMajor).$(VersionMinor).0.0"
 			AssemblyFileVersion="$(VersionMajor).$(VersionMinor).$(Build).$(Revision)"
 			AssemblyInformationalVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)$(VersionSuffix)"/>
 	</Target>
@@ -57,7 +57,8 @@
 	<Target Name="PrepairFiles" DependsOnTargets="Compile">
 		<ItemGroup>
 			<BinFiles Include="$(ProjectDir)\Bin\Release\Our.Umbraco.Sisyphus.dll" />
-			<PluginFiles Include="$(ProjectDir)\umbraco\plugins\Sisyphus\*.js" />
+			<PluginFiles Include="$(RootDir)\Lib\sisyphus\sisyphus.min.js" />
+			<PluginFiles Include="$(ProjectDir)\umbraco\plugins\Sisyphus\loader.js" />
 			<PackageFile Include="$(PackageDir)\package.xml" />
 		</ItemGroup>
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\bin" />

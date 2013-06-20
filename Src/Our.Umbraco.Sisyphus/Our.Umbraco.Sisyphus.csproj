@@ -65,8 +65,10 @@
     <Compile Include="Properties\VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\Lib\sisyphus\sisyphus.min.js">
+      <Link>umbraco\plugins\Sisyphus\sisyphus.min.js</Link>
+    </Content>
     <Content Include="umbraco\plugins\Sisyphus\loader.js" />
-    <Content Include="umbraco\plugins\Sisyphus\sisyphus.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
